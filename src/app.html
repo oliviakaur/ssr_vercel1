@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  %sveltekit.head%
+
+  <!-- Socket Pool Discipline: Max 3 Static Preconnect Origins -->
+  <link rel="preconnect" href="https://bunbunserver.my.id" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+
+  <!-- Static DNS-Prefetch for Image CDNs -->
+  <link rel="dns-prefetch" href="https://bunbunserver.my.id">
+  <link rel="dns-prefetch" href="https://i0.wp.com">
+  <link rel="dns-prefetch" href="https://i1.wp.com">
+  <link rel="dns-prefetch" href="https://i2.wp.com">
+  <link rel="dns-prefetch" href="https://blogger.googleusercontent.com">
+  <link rel="dns-prefetch" href="https://lh3.googleusercontent.com">
+
+  <!-- Non-Blocking Google Fonts -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap">
+  </noscript>
+
+  <!-- Loop-Proof Image onerror SVG Data URI Fallback -->
+  <script>
+  (function () {
+    'use strict';
+    window.__BUNBUN_FALLBACK_SVG__ =
+      'data:image/svg+xml;utf8,' +
+      encodeURIComponent(
+        '<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">' +
+        '<rect width="100%" height="100%" fill="#e2e8f0"/>' +
+        '<text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#475569" font-family="sans-serif" font-size="16" font-weight="600">Technical Diagram Unavailable</text>' +
+        '</svg>'
+      );
+    window.__BUNBUN_IMG_ERR__ = function (imgEl) {
+      if (!imgEl) return;
+      imgEl.onerror = null;
+      if (imgEl.src !== window.__BUNBUN_FALLBACK_SVG__) {
+        imgEl.src = window.__BUNBUN_FALLBACK_SVG__;
+      }
+    };
+  })();
+  </script>
+</head>
+<body data-sveltekit-preload-data="hover">
+  <div style="display: contents">%sveltekit.body%</div>
+  <script src="https://cdn.jsdelivr.net/gh/luqmanthinkpad/csrnew/gem.js"></script>
+</body>
+</html>
